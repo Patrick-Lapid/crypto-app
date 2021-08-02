@@ -1,0 +1,60 @@
+:root{
+    --mainText: black;
+    --secondaryText: #b3b3b3;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: 'Arvo', serif;
+
+}
+
+h1, h2, h3, a{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration:none;
+    color: var(--mainText);
+}
+
+ul{
+  list-style-type: none;  
+  padding-left: 0;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* NAV */
+.nav-section{
+    background-color: var(--secondaryText);
+    width: 100%;
+    overflow: auto;
+}
+
+.nav-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-flex ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-flex li{
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container{
+        width: 95%;
+    }
+}
