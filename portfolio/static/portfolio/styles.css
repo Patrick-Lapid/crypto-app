@@ -3,12 +3,16 @@
     --secondaryText: #b3b3b3;
 }
 
+html{
+    height: 120%;
+}
+
 body{
     padding: 0;
     margin: 0;
-    color: #fff;
     font-family: 'Arvo', serif;
-
+    background: linear-gradient(to bottom, green, blue);
+    overflow: auto;
 }
 
 h1, h2, h3, a{
@@ -27,15 +31,19 @@ ul{
 }
 
 .main-container{
-    width: 1200px;
+    width: 85%;
     margin: 0 auto;
 }
 
 /* NAV */
 .nav-section{
-    background-color: var(--secondaryText);
+    background-color: var(--mainText);
     width: 100%;
     overflow: auto;
+}
+
+.nav-section a{
+    color:white;
 }
 
 .nav-flex{
@@ -51,6 +59,9 @@ ul{
 
 .nav-flex li{
     margin-left: 10px;
+}
+.navbar a:hover{
+    border-bottom: 2px solid;
 }
 
 @media screen and (max-width: 1200px) {

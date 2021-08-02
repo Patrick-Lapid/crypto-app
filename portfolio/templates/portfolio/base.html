@@ -17,7 +17,7 @@
     <div class="nav-section">
         <div class="main-container">
             <div class="nav-flex">
-                <h1><a href='#' class='logo'>CryptoCurrency Portfolio</a></h1>
+                <h1><a href="{% url 'portfolio-home' %}" class='logo'>Crypto Tracker</a></h1>
                 <div class="navbar">
                     <ul>
                         <li><a href="{% url 'portfolio-about' %}">About</a></li>
@@ -30,7 +30,7 @@
     </div>
 
     <!-- CONTENT -->
-    <div class="main-container">
+    <div class="main-content">
         {% block content %}{% endblock content %}
     </div>
 
