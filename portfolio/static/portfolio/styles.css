@@ -12,15 +12,13 @@ body::-webkit-scrollbar-track {
   background: white;
 }
 
-html {
-  /* overflow: auto; */
-}
-
 body {
   padding: 0;
   margin: 0;
-  font-family: "Arvo", serif;
+  font-family: 'Montserrat', sans-serif;
   overflow: auto;
+  line-height: 1.6;
+  letter-spacing: 1px;
 }
 
 h1,
@@ -82,8 +80,52 @@ ul {
 
 .body-section {
   padding: 2rem;
-  background-color: violet;
   height: 100vh;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.main-price-container{
+  margin: 5px auto;
+  padding: 0.5rem;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.asset-list{
+  margin: 10px auto;
+  border: 2px solid green;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#asset-table{
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+#heading-row{
+  border-top: 1px solid black;
+  border-bottom: 2px solid black;
+}
+
+#asset-table th{
+  text-align:left;
+  
+  padding: 0.5rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#asset-table td{
+  text-align: left;
+  padding: 0.5rem;
+}
+
+#asset-caption{
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 1200px) {

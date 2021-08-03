@@ -1,3 +1,32 @@
 {% extends 'portfolio/base.html' %}
-
-    <h1>Hello</h1>
+{% block content %}
+<div class="main-price-container">
+    <h1 class="main-price">$38,000.34</h1>
+</div>
+<div class="asset-list">
+    <table id="asset-table">
+        <caption id="asset-caption">Your Assets</caption>
+        <tr id="heading-row">
+            <th>Asset</th>
+            <th>Balance</th>
+            <th>Allocation</th>
+        </tr>
+        <tr>
+            <td>Asset 1</td>
+            <td>$60.00</td>
+            <td>0.5%</td>
+        </tr>
+        <tr>
+            <td>Asset 2</td>
+            <td>$40.34</td>
+            <td>0.10%</td>
+        </tr>
+        <tr>
+            <td>Asset 3</td>
+            <td>$37,900.00</td>
+            <td>99.1%</td>
+        </tr>
+        
+    </table>
+</div>
+{% endblock %}
