@@ -20,9 +20,8 @@
                 <h1><a href="{% url 'portfolio-home' %}" class='logo'>Crypto Tracker</a></h1>
                 <div class="navbar">
                     <ul>
-                        <li><a href="{% url 'portfolio-about' %}">About</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
+                        <li><h4><a href="#">Login</a></h4></li>
+                        <li><h4><a href="#">Register</a></h4></li>
                     </ul>
                 </div>
             </div>
@@ -30,10 +29,18 @@
     </div>
 
     <!-- CONTENT -->
-    <div class="main-content">
+    
+    <!-- <div class="sidebar">
+        <ul>
+            <li><a href="#">Home</a><i class="fa-solid fa-house"></i></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div> -->
+    <div class="body-section">
         {% block content %}{% endblock content %}
     </div>
-
+    
     <!-- FOOTER -->
     <div class="footer"></div>
     
