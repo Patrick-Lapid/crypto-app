@@ -93,8 +93,6 @@ ul {
 /* TABLE */
 .asset-list{
   margin: 10px auto;
-  border: 2px solid green;
-  border-radius: 5px;
   padding: 0.5rem;
 }
 
@@ -128,7 +126,7 @@ ul {
   margin-bottom: 5px;
 }
 
-.table-header{
+.table-header .portfolio-header{
   width: 100%;
   display: flex;
   flex-direction: row;
