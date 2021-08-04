@@ -31,9 +31,9 @@ for coin in coins:
 
 def displayCoinList():
     for coin in coins:
-        coin['quote']['USD']['price'] = f"{(coin['quote']['USD']['price']):,}"
-        coin['quote']['USD']['market_cap'] = f"{(coin['quote']['USD']['market_cap']):,}"
-        coin['circulating_supply'] = f"{(coin['circulating_supply']):,}"
+        coin['quote']['USD']['price'] = f"{(float(coin['quote']['USD']['price'])):,}"
+        coin['quote']['USD']['market_cap'] = f"{(float(coin['quote']['USD']['market_cap'])):,}"
+        coin['circulating_supply'] = f"{float(coin['circulating_supply']):,}"
 
 
 def getPrice(ticker):
