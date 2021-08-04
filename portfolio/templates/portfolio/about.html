@@ -8,6 +8,7 @@
 
 <table id="asset-table">
     <tr id="heading-row">
+        <th>Rank</th>
         <th>Coin</th>
         <th>Price</th>
         <th>Circulating Supply</th>
@@ -15,6 +16,7 @@
     </tr>
     {% for coin in coins %}
         <tr>
+            <td>{{ coin.cmc_rank }}</td>
             <td>{{ coin.name }}</td>
             <td>${{coin.quote.USD.price}}</td>
             <td>{{coin.circulating_supply}}</td>

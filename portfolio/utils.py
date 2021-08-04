@@ -27,12 +27,13 @@ for coin in coins:
     coin['quote']['USD']['market_cap'] = round(
         coin['quote']['USD']['market_cap'], 2)
     coin['circulating_supply'] = round(coin['circulating_supply'], 2)
+    print(coin['quote']['USD']['price'])
 
 
 def displayCoinList():
     for coin in coins:
-        coin['quote']['USD']['price'] = f"{(float(coin['quote']['USD']['price'])):,}"
-        coin['quote']['USD']['market_cap'] = f"{(float(coin['quote']['USD']['market_cap'])):,}"
+        coin['quote']['USD']['price'] = f"{float(coin['quote']['USD']['price']):,}"
+        coin['quote']['USD']['market_cap'] = f"{float(coin['quote']['USD']['market_cap']):,}"
         coin['circulating_supply'] = f"{float(coin['circulating_supply']):,}"
 
 
