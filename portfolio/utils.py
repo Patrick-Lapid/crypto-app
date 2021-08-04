@@ -27,6 +27,4 @@ def getPrice(ticker):
     print("Invalid Ticker")
 
 
-btc = getPrice("btec")
-
 print(btc)
