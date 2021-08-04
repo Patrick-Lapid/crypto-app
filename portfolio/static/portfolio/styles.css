@@ -76,8 +76,6 @@ ul {
   border-bottom: 2px solid;
 }
 
-/* SIDEBAR */
-
 .body-section {
   padding: 2rem;
   height: 100vh;
@@ -92,6 +90,7 @@ ul {
   text-align: center;
 }
 
+/* TABLE */
 .asset-list{
   margin: 10px auto;
   border: 2px solid green;
@@ -102,6 +101,7 @@ ul {
 #asset-table{
   width: 100%;
   margin: 0 auto;
+  column-gap: 40px;
   border-collapse: collapse;
 }
 
@@ -126,6 +126,14 @@ ul {
 #asset-caption{
   text-align: left;
   margin-bottom: 5px;
+}
+
+.table-header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (max-width: 1200px) {

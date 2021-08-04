@@ -1,6 +1,27 @@
 {% extends 'portfolio/base.html' %}
 {% block content %}
+<div class="table-header">
+    <h2 id="asset-caption">All Assets</h2>
+    <p class="updated">Last Updated: Today</p>
+</div>
 
-<h1>About Page</h1>
+
+<table id="asset-table">
+    <tr id="heading-row">
+        <th>Coin</th>
+        <th>Price</th>
+        <th>Circulating Supply</th>
+        <th>Market Cap</th>
+    </tr>
+    {% for coin in coins %}
+        <tr>
+            <td>{{ coin.name }}</td>
+            <td>${{coin.quote.USD.price}}</td>
+            <td>{{coin.circulating_supply}}</td>
+            <td>${{coin.quote.USD.market_cap}}</td>
+        </tr>
+    {% endfor %}
+    
+</table>
    
 {% endblock %}

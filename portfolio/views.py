@@ -1,8 +1,13 @@
 from django.shortcuts import render
+from . import utils 
 
 # Create your views here.
 def home(request):
+    
     return render(request, 'portfolio/home.html')
 
 def about(request):
-    return render(request, 'portfolio/about.html')
+    if request.method=="GET":
+        utils.displayCoinList()
+        coinlist = utils.coins
+    return render(request, 'portfolio/about.html', {'coins': coinlist}) 
