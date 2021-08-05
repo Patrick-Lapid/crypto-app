@@ -1,4 +1,5 @@
 {% extends 'portfolio/base.html' %}
+{% load humanize %}
 {% block content %}
 <div class="table-header">
     <h2 id="asset-caption">All Assets</h2>
@@ -18,9 +19,9 @@
         <tr>
             <td>{{ coin.cmc_rank }}</td>
             <td>{{ coin.name }}</td>
-            <td>${{coin.quote.USD.price}}</td>
-            <td>{{coin.circulating_supply}}</td>
-            <td>${{coin.quote.USD.market_cap}}</td>
+            <td>${{ coin.quote.USD.price|intcomma }}</td>
+            <td>{{coin.circulating_supply|intcomma}}</td>
+            <td>${{coin.quote.USD.market_cap|intcomma}}</td>
         </tr>
     {% endfor %}
     

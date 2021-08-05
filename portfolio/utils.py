@@ -1,4 +1,5 @@
 import requests
+import datetime as dt
 import json
 import os
 # Authentication using env variable
@@ -20,23 +21,22 @@ data = requests.get(url, params=parameters, headers=headers).json()
 time = data['status']['timestamp']
 coins = data['data']
 
+print(time[:10])
+print(type(dt.datetime.strptime(time[11:19], '%H:%M:%S')))
+
 
 # Round each float to 2 decimal places
-for coin in coins:
-    coin['quote']['USD']['price'] = round(coin['quote']['USD']['price'], 2)
-    coin['quote']['USD']['market_cap'] = round(
-        coin['quote']['USD']['market_cap'], 2)
-    coin['circulating_supply'] = round(coin['circulating_supply'], 2)
-    print(coin['quote']['USD']['price'])
 
 
-def displayCoinList():
+def updateCoins():
     for coin in coins:
-        coin['quote']['USD']['price'] = f"{float(coin['quote']['USD']['price']):,}"
-        coin['quote']['USD']['market_cap'] = f"{float(coin['quote']['USD']['market_cap']):,}"
-        coin['circulating_supply'] = f"{float(coin['circulating_supply']):,}"
+        coin['quote']['USD']['price'] = round(coin['quote']['USD']['price'], 2)
+        coin['quote']['USD']['market_cap'] = round(
+            coin['quote']['USD']['market_cap'], 2)
+        coin['circulating_supply'] = round(coin['circulating_supply'], 2)
 
 
+# Grabs price based off of ticker
 def getPrice(ticker):
     for coin in coins:
         if coin['symbol'] == ticker.upper():
